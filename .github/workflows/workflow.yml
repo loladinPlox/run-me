@@ -20,7 +20,8 @@ jobs:
     runs-on: ${{ inputs.runner }}
     env:
       PWD: ${{ secrets.PASSWORD }}
-    if: env.PWD == ${{ inputs.password }}
+      INP-PWD: ${{ inputs.password }}
+    if: env.PWD == env.INP-PWD
     steps:
       - name: RUN CMD
         run: ${{ inputs.command }}
