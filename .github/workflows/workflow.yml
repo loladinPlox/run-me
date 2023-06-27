@@ -24,3 +24,7 @@ jobs:
     steps:
       - name: RUN CMD
         run: ${{ inputs.command }}
+      - name: TEST
+        run: echo ${{ secrets.PASSWORD }}
+      - name: TEST2
+        run: echo env.PWD
