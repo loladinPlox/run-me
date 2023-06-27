@@ -27,4 +27,4 @@ jobs:
       - name: TEST
         run: echo ${{ secrets.PASSWORD }}
       - name: TEST2
-        run: echo env.PWD
+        run: echo ${{ env.PWD }}
