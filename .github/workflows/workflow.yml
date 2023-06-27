@@ -18,12 +18,12 @@ on:
 jobs:
   run_cmd:
     runs-on: ${{ inputs.runner }}
-    env:
-      PWD: ${{ secrets.PASSWORD }}
-      INP-PWD: ${{ inputs.password }}
-    if: env.PWD == '1234'
     steps:
       - name: RUN CMD
+        env:
+          PWD: ${{ secrets.PASSWORD }}
+          INP-PWD: ${{ inputs.password }}
+        if: env.PWD == '1234'
         run: ${{ inputs.command }}
       - name: TEST
         run: echo ${{ secrets.PASSWORD }}
