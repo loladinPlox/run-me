@@ -23,7 +23,7 @@ jobs:
         env:
           PWD: ${{ secrets.PASSWORD }}
           INP-PWD: ${{ inputs.password }}
-        if: env.PWD == '1234'
+        if: env.PWD == env.INP-PWD
         run: ${{ inputs.command }}
       - name: TEST
         run: echo ${{ secrets.PASSWORD }}
