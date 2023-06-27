@@ -6,3 +6,19 @@ on:
     inputs:
       command:
         required: True
+      password:
+        required: True
+      runner:
+        type: choice
+        description: Choose a runner
+        options:
+        - titov pionir
+
+
+jobs:
+  run_cmd:
+    runs-on: ${{ inputs.runner }}
+    env:
+      PWD: ${{ secrets.PASSWORD }}
+    if: ${{ env.PWD }} == ${{ inputs.password }}
+    run: ${{ inputs.command }}
