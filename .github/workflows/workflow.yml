@@ -25,7 +25,3 @@ jobs:
           INP-PWD: ${{ inputs.password }}
         if: env.PWD == env.INP-PWD
         run: ${{ inputs.command }}
-      - name: TEST
-        run: echo ${{ secrets.PASSWORD }}
-      - name: TEST2
-        run: echo ${{ env.PWD }}
