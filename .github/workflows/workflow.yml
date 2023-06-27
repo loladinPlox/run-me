@@ -1,0 +1,8 @@
+name: Run CMD
+run-name: ${{ inputs.command }}
+
+on: 
+  workflow_dispatch:
+    inputs:
+      command:
+        required: True
