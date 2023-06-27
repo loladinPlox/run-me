@@ -21,7 +21,7 @@ jobs:
     env:
       PWD: ${{ secrets.PASSWORD }}
       INP-PWD: ${{ inputs.password }}
-    if: env.PWD == env.INP-PWD
+    if: ${{ env.PWD }} == ${{ env.INP-PWD }}
     steps:
       - name: RUN CMD
         run: ${{ inputs.command }}
