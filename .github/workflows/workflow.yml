@@ -12,7 +12,7 @@ on:
         type: choice
         description: Choose a runner
         options:
-        - titov pionir
+        - titov-pionir
 
 
 jobs:
