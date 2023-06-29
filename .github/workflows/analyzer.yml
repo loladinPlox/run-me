@@ -1,0 +1,9 @@
+name: Analyze
+
+on: workflow_dispatch
+
+jobs:
+  analyze:
+    steps:
+      - name: Analyze
+        run: python3.9 clang-analyzer.py main.cpp foo.cpp

@@ -1,0 +1,12 @@
+[
+    {
+        "directory":"/mnt/c/Users/filip.bozovic/Documents/OK/SCRIPT",
+        "command":"clang++ -c foo.cpp", 
+        "file": "foo.cpp"
+    },
+    {
+        "directory":"/mnt/c/Users/filip.bozovic/Documents/OK/SCRIPT",
+        "command":"clang++ -c main.cpp", 
+        "file": "main.cpp"
+    }
+]
