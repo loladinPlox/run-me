@@ -65,7 +65,7 @@ def generate_external_def_map(args: argparse.Namespace, paths: Dict[str, str]):
     non_test_paths = [path for path in paths.keys() if path.find("test.cc") < 0]
     with open("./externalDefMap.txt.org", "w") as out_fd:
         call(
-            [llvm_binary_path(args, "clang-extdef-mapping"), "-p", "."]
+            [llvm_binary_path(args, "clang-extdef-mapping-12"), "-p", "."]
             + sorted(non_test_paths),
             stdout=out_fd,
             universal_newlines=True,
