@@ -9,6 +9,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Requirements
-        run: sudo apt-get update -y && sudo apt-get install clang-tools-8 && python -m pip install dataclasses_json 
+        run: sudo apt-get update -y && sudo apt-get install clang-tools -y && python -m pip install dataclasses_json 
       - name: Analyze
         run: python clang-analyzer.py main.cpp foo.cpp
