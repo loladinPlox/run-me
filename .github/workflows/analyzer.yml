@@ -8,5 +8,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Location
+        run: pwd
       - name: Analyze
         run: python clang-analyzer.py main.cpp foo.cpp
