@@ -10,6 +10,7 @@ from dataclasses_json import dataclass_json
 from typing import Dict, List
 import subprocess
 import shlex
+import sys
 
 
 def call(cmdline: List[str], **kwargs):
@@ -192,5 +193,4 @@ parser.add_argument(
 args = parser.parse_args()
 
 r = main()
-
-subprocess.run(["exit 1"])
+sys.exit(r)
