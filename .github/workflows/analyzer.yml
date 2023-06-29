@@ -19,6 +19,11 @@ jobs:
         run: pwd
       - name: Analyze
         run: python clang-analyzer.py main.cpp foo.cpp
+      - name: Upload results
+        uses: actions/upload-artifact@v3
+          with: results.txt
+          path: results.txt
+
   post-failure:
     runs-on: ubuntu-latest
     steps:
