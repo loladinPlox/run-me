@@ -160,7 +160,7 @@ def main():
 
     with open('results.txt', 'a') as output:
         output.write(fixNeeded)
-    return -1
+    return 1
 
 
 logging.basicConfig(level=logging.INFO)
@@ -193,4 +193,4 @@ parser.add_argument(
 args = parser.parse_args()
 
 r = main()
-sys.exit(1)
+sys.exit(r)
