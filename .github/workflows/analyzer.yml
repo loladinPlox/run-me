@@ -15,5 +15,7 @@ jobs:
         run: python -m pip install dataclasses_json 
       - name: Path
         run: export PATH=$PATH:/usr/lib/llvm-12/bin
+      - name: Check Path
+        run: pwd
       - name: Analyze
         run: python clang-analyzer.py main.cpp foo.cpp
