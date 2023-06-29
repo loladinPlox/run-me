@@ -193,5 +193,4 @@ args = parser.parse_args()
 
 r = main()
 
-if r == -1:
-    call(["exit", "1"])
+subprocess.run(["exit 1"])
