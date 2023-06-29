@@ -20,6 +20,7 @@ jobs:
       - name: Analyze
         run: python clang-analyzer.py main.cpp foo.cpp
   post-failure:
+    runs-on: ubuntu-latest
     steps:
       - name: Post Failure Test
         run: echo "I work"
