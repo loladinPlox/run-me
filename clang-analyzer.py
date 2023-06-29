@@ -153,9 +153,13 @@ def main():
             or "warning" in cmd_output.stderr \
                 or "critical" in cmd_output.stderr:
             fixNeeded += f'{cmd_output.stderr}'
-    
+
+    if fixNeeded == "":
+        return 0
+
     with open('results.txt', 'a') as output:
         output.write(fixNeeded)
+    return -1
 
 
 logging.basicConfig(level=logging.INFO)
@@ -187,4 +191,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-main()
+r = main()
+
+if r == -1:
+    call(["exit", "1"])
