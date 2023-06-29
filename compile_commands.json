@@ -1,11 +1,11 @@
 [
     {
-        "directory":"/mnt/c/Users/filip.bozovic/Documents/OK/SCRIPT",
+        "directory":"/home/runner/work/run-me/run-me",
         "command":"clang++ -c foo.cpp", 
         "file": "foo.cpp"
     },
     {
-        "directory":"/mnt/c/Users/filip.bozovic/Documents/OK/SCRIPT",
+        "directory":"/home/runner/work/run-me/run-me",
         "command":"clang++ -c main.cpp", 
         "file": "main.cpp"
     }
