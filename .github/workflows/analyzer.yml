@@ -28,7 +28,7 @@ jobs:
 
   post-failure:
     runs-on: ubuntu-latest
-    depends-on: analyze
+    needs: analyze
     steps:
       - name: Post Failure Test
         run: echo "I work"
