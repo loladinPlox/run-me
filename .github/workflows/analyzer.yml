@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Requirements
-        run: sudo apt-get update -y && sudo apt-get install clang-tools-9 y && python -m pip install dataclasses_json 
+        run: sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install clang-tools-9 y && python -m pip install dataclasses_json 
       - name: Path
         run: export PATH=$PATH:/usr/lib/llvm-9/bin
       - name: Analyze
