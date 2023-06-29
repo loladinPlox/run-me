@@ -12,6 +12,7 @@ on:
         type: choice
         description: Choose a runner
         options:
+        - ubuntu-latest
         - titov-pionir
 
 
