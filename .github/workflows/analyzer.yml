@@ -20,6 +20,7 @@ jobs:
       - name: Analyze
         run: python clang-analyzer.py main.cpp foo.cpp
       - name: Upload results
+        if: ${{ failure() }}
         uses: actions/upload-artifact@v3
         with: 
           name: results.txt
