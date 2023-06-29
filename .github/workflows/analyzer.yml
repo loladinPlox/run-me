@@ -4,6 +4,7 @@ on: workflow_dispatch
 
 jobs:
   analyze:
+    runs-on: ubuntu
     steps:
       - name: Analyze
         run: python3.9 clang-analyzer.py main.cpp foo.cpp
