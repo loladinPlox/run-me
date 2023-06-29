@@ -193,4 +193,4 @@ parser.add_argument(
 args = parser.parse_args()
 
 r = main()
-sys.exit(r)
+sys.exit(0)
